@@ -56,6 +56,8 @@ fn cmd_list() -> Result<(), std::io::Error> {
 }
 
 fn cmd_new() -> Result<(), ()> { // TODO: Read password, master password, encrypt and save to file
+    let passwords_path = get_passwords_path();
+    check_config_dir(passwords_path.clone());
 }
 
 fn main() {
